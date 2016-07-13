@@ -25,18 +25,18 @@ public class JsonParser
             //long id;
             long pop;
             String city;
-            if (root.get("lang") != null &&
-                "en".equals(root.get("lang").textValue()))
-            {
-                if (root.get("id") != null && root.get("text") != null)
+            //if (root.get("lang") != null &&
+            //    "en".equals(root.get("lang").textValue()))
+            //{
+                if (root.get("pop") != null && root.get("city") != null)
                 {
                     pop = root.get("pop").longValue();
                     city = root.get("city").textValue();
                     return new Tuple2<Long, String>(pop, city);
                 }
                 return null;
-            }
-            return null;
+            //}
+            //return null;
         }
         catch (IOException ex)
         {
