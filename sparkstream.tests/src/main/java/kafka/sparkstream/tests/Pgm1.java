@@ -114,7 +114,7 @@ public final class Pgm1 {
         }
       });
     */
-    lines.print();
+    //lines.print();
 
     // Start the computation
     jssc.start();
