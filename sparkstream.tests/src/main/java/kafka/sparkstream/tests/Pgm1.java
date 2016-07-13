@@ -90,6 +90,12 @@ public final class Pgm1 {
         return tuple2._2();
       }
     });
+    
+    JavaPairDStream<Long, String> tweets = lines.mapToPair(
+    		new JsonParser());
+    
+    tweets.print();
+    
     /*
     JavaDStream<String> words = lines.flatMap(new FlatMapFunction<String, String>() {
       public Iterable<String> call(String x) {
